@@ -11,7 +11,6 @@ const Skills = () => {
     { name: 'Node.js', level: 80, category: 'Backend' },
     { name: 'MongoDB', level: 70, category: 'Backend' },
     { name: 'Git/GitHub', level: 90, category: 'Tools' },
-    { name: 'VS Code', level: 95, category: 'Tools' },
   ];
 
   const categories = ['All', 'Frontend', 'Backend', 'Tools'];
