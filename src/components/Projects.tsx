@@ -32,7 +32,7 @@ const Projects = () => {
         'A responsive Tic Tac Toe web app built with React, TypeScript, and Vite, featuring single-player AI and local multiplayer with smooth animations.',
       image:
         'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503237/a703bb32-e1ba-4653-8b18-14d7d27ced66_jvisaj.jpg',
-      technologies: ['Java'],
+      technologies: ['React', 'TypeScript', 'Vite'],
       githubUrl: 'https://github.com/adityavinay1002/tic-tac-toe-game',
       liveUrl: 'https://tic-tac-toe-game-ten-neon.vercel.app/',
     }, // ✅ comma added here
