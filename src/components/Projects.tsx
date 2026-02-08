@@ -6,30 +6,70 @@ const Projects = () => {
     {
       id: 1,
       title: 'ATM Interface',
-      description: 'A full-stack banking interface built with Java and MySQL. Features include secure user authentication, balance inquiries, withdrawals, deposits, and transaction history with PIN validation.',
-      image: 'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503115/WhatsApp_Image_2025-08-02_at_12.01.20_e48ca135_y6emyu.jpg',
+      description:
+        'A full-stack banking interface built with Java and MySQL. Features include secure user authentication, balance inquiries, withdrawals, deposits, and transaction history with PIN validation.',
+      image:
+        'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503115/WhatsApp_Image_2025-08-02_at_12.01.20_e48ca135_y6emyu.jpg',
       technologies: ['Java', 'JDBC', 'MySQL'],
-      githubUrl: 'https://github.com',
-      liveUrl: '#'
+      githubUrl: 'https://github.com/adityavinay1002/Task-2',
+      liveUrl: '#',
     },
     {
       id: 2,
       title: 'Finance Management and Banking Application',
-      description: 'A responsive web application built with React, Firebase, and Tailwind CSS to manage finances, track expenses, and perform secure banking operations. Includes user authentication, bank account overview, fund transfers, and transaction insights.',
-      image: 'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503169/1706887784053_oxqurl.png',
+      description:
+        'A responsive web application built with React, Firebase, and Tailwind CSS to manage finances, track expenses, and perform secure banking operations. Includes user authentication, bank account overview, fund transfers, and transaction insights.',
+      image:
+        'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503169/1706887784053_oxqurl.png',
       technologies: ['React', 'Spring Boot', 'Tailwind CSS'],
-      githubUrl: 'https://github.com',
-      liveUrl: '#'
+      githubUrl: 'https://github.com/adityavinay1002/finance-banking',
+      liveUrl: '#',
     },
     {
       id: 3,
       title: 'Tic Tac Toe Game',
-      description: 'A classic Tic Tac Toe game implemented with HTML, CSS3, and JavaScript. Features include a responsive UI, basic AI logic for single-player mode, and smooth gameplay animations.',
-      image: 'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503237/a703bb32-e1ba-4653-8b18-14d7d27ced66_jvisaj.jpg',
+      description:
+        'A responsive Tic Tac Toe web app built with React, TypeScript, and Vite, featuring single-player AI and local multiplayer with smooth animations.',
+      image:
+        'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503237/a703bb32-e1ba-4653-8b18-14d7d27ced66_jvisaj.jpg',
       technologies: ['Java'],
+      githubUrl: 'https://github.com/adityavinay1002/tic-tac-toe-game',
+      liveUrl: '#',
+    }, // ✅ comma added here
+
+    {
+      id: 4,
+      title: 'Hand & Facial Gesture–Controlled Intelligent Car Driving System',
+      description:
+        'A real-time computer vision–based driving system where facial head tilt controls steering and single-hand gestures control speed, braking, and reverse. Built using webcam input for hands-free and intuitive vehicle control.',
+      image:
+        'https://res.cloudinary.com/doo9uc85i/image/upload/hand-gestures_udcolz.jpg',
+      technologies: ['Python', 'OpenCV', 'MediaPipe'],
+      githubUrl: 'https://github.com/adityavinay1002/Hands-Free-Car-Navigation-Using-Facial-and-Hand-Gestures',
+      liveUrl: '#',
+    },
+    {
+      id: 5,
+      title: 'Explainable Vision Image Processing Application',
+      description:
+        'An explainable computer vision system that applies image processing techniques while visually explaining each transformation step. Developed as a full-stack application with an interactive TypeScript-based frontend.',
+      image:
+        'https://res.cloudinary.com/doo9uc85i/image/upload/vision_zucizf.jpg',
+      technologies: ['TypeScript', 'Computer Vision', 'Full Stack'],
+      githubUrl: 'https://github.com/adityavinay1002/explainable-vision',
+      liveUrl: '#',
+    },
+    {
+      id: 6,
+      title: 'Smart Parking Management System',
+      description:
+        'An IoT-based smart parking system that detects parking slot availability using sensors and displays real-time status. Designed to reduce traffic congestion and improve parking efficiency.',
+      image:
+        'https://res.cloudinary.com/doo9uc85i/image/upload/smart-parking_gchrz3.jpg',
+      technologies: ['Arduino', 'Sensors', 'Embedded Systems'],
       githubUrl: 'https://github.com',
-      liveUrl: '#'
-    }
+      liveUrl: '#',
+    },
   ];
 
   return (
@@ -60,7 +100,7 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
               </div>
-              
+
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-3">
                   {project.technologies.map((tech) => (
@@ -72,14 +112,14 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 line-clamp-3">
                   {project.description}
                 </p>
-                
+
                 <div className="flex gap-3">
                   <a
                     href={project.githubUrl}
