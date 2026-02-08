@@ -22,8 +22,8 @@ const Projects = () => {
       image:
         'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503169/1706887784053_oxqurl.png',
       technologies: ['React', 'Spring Boot', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/adityavinay1002/finance-banking',
-      liveUrl: '#',
+      githubUrl: 'https://github.com/adityavinay1002/finance-banking-application',
+      liveUrl: 'https://finance-banking-application.vercel.app/',
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const Projects = () => {
         'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503237/a703bb32-e1ba-4653-8b18-14d7d27ced66_jvisaj.jpg',
       technologies: ['Java'],
       githubUrl: 'https://github.com/adityavinay1002/tic-tac-toe-game',
-      liveUrl: '#',
+      liveUrl: 'https://tic-tac-toe-game-ten-neon.vercel.app/',
     }, // ✅ comma added here
 
     {
@@ -57,7 +57,7 @@ const Projects = () => {
         'https://res.cloudinary.com/doo9uc85i/image/upload/vision_zucizf.jpg',
       technologies: ['TypeScript', 'Computer Vision', 'Full Stack'],
       githubUrl: 'https://github.com/adityavinay1002/explainable-vision',
-      liveUrl: '#',
+      liveUrl: 'https://explainable-vision.vercel.app/',
     },
     {
       id: 6,
