@@ -4,8 +4,8 @@ import { Code, User, Briefcase, Download } from 'lucide-react';
 const About = () => {
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = 'CV.pdf';
-    link.download = 'CV.pdf';
+    link.href = 'Resume-CV.pdf';
+    link.download = 'Resume-CV.pdf';
     link.click();
   };
 
