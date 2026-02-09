@@ -1,20 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Globe } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     message: ''
   });
 
+  const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    alert('Message sent successfully!');
+    setIsSubmitting(true);
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          'service_ujbhigf',
+          'template_vdse406',
+          form.current,
+          '97klqTUoMKm_D4f5G'
+        )
+        .then(
+          () => {
+            toast.success('Message sent successfully!');
+            setFormData({ user_name: '', user_email: '', message: '' });
+          },
+          (error) => {
+            console.error('FAILED...', error.text);
+            toast.error('Failed to send message. Please try again.');
+          }
+        )
+        .finally(() => {
+          setIsSubmitting(false);
+        });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -42,7 +66,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
               Contact Information
             </h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-center">
                 <div className="p-3 bg-purple-600 rounded-lg text-white mr-4">
@@ -113,8 +137,8 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
               Send a Message
             </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
+
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your Name
@@ -122,8 +146,8 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name"
-                  value={formData.name}
+                  name="user_name"
+                  value={formData.user_name}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
@@ -138,8 +162,8 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
-                  value={formData.email}
+                  name="user_email"
+                  value={formData.user_email}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
@@ -165,9 +189,10 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
