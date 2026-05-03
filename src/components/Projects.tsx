@@ -79,7 +79,7 @@ const Projects = () => {
         'A responsive banking web app for managing finances, tracking expenses, and performing secure transactions.',
       image:
         'https://res.cloudinary.com/dpa0sb1tm/image/upload/v1754503169/1706887784053_oxqurl.png',
-      technologies: ['React', 'Spring Boot', 'Tailwind CSS'],
+      technologies: ['React', 'Node.js', 'MongoDB'],
       githubUrl:
         'https://github.com/adityavinay1002/finance-banking-application',
       liveUrl: 'https://finance-banking-application.vercel.app/',
