@@ -9,8 +9,8 @@ const Projects = () => {
       description:
         'An automated portfolio generator that creates professional developer portfolios using predefined templates and user input.',
       image:
-        'https://res.cloudinary.com/doo9uc85i/image/upload/portfolio_gen.jpg',
-      technologies: ['React', 'Node.js', 'Templates'],
+        'https://res.cloudinary.com/doo9uc85i/image/upload/v1777785163/Screenshot_2026-05-03_104113_dytpsd.png',
+      technologies: ['React', 'Node.js', 'MongoDB'],
       githubUrl: 'https://github.com/adityavinay1002/Hackathon-PortFolio-Generator',
       liveUrl: '#',
     },
@@ -20,7 +20,7 @@ const Projects = () => {
       description:
         'A web-based resume builder that allows users to create and export professional resumes with customizable templates.',
       image:
-        'https://res.cloudinary.com/doo9uc85i/image/upload/resume_builder.jpg',
+        'https://res.cloudinary.com/doo9uc85i/image/upload/v1777785489/image_u6mxof.webp',
       technologies: ['React', 'Node.js', 'MongoDB'],
       githubUrl: 'https://github.com/adityavinay1002/resume-builder',
       liveUrl: '#',
@@ -43,7 +43,7 @@ const Projects = () => {
       description:
         'AI-powered attendance tracking using face recognition to automate student presence in rural classrooms.',
       image:
-        'https://res.cloudinary.com/doo9uc85i/image/upload/attendance.jpg',
+        'https://res.cloudinary.com/doo9uc85i/image/upload/v1777784366/ai-based-face-recognition-attendance-system-500x500_mtanea.webp',
       technologies: ['Python', 'OpenCV', 'Face Recognition'],
       githubUrl:
         'https://github.com/adityavinay1002/Automated-Attendance-System-Specialization-Hackathon',
@@ -55,7 +55,7 @@ const Projects = () => {
       description:
         'A deep learning system that analyzes sports footage to extract player performance insights and movement tracking.',
       image:
-        'https://res.cloudinary.com/doo9uc85i/image/upload/sports_ai.jpg',
+        'https://res.cloudinary.com/doo9uc85i/image/upload/v1777784347/sports-analytics-ai-optimised_b22neo.webp',
       technologies: ['Python', 'Deep Learning', 'Computer Vision'],
       githubUrl:
         'https://github.com/adityavinay1002/AI-Sports-Performance-Analysis',
@@ -90,7 +90,7 @@ const Projects = () => {
       description:
         'A collaborative expense tracking tool to split bills and manage shared financial activities efficiently.',
       image:
-        'https://res.cloudinary.com/doo9uc85i/image/upload/expense_splitter.jpg',
+        'https://res.cloudinary.com/doo9uc85i/image/upload/v1777784075/Track-daily-expenses-with-AI_ur0q3a.webp',
       technologies: ['React', 'Node.js', 'MongoDB'],
       githubUrl: 'https://github.com/adityavinay1002/Expense-splitter',
       liveUrl: '#',
